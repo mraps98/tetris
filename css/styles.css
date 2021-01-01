@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+}
+.gamescreen__grid{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: auto;
+}
+.gamescreen__gridRow{
+    display: flex;
+    flex-direction: row;
+}
+.gamescreen__gridBox{
+    border: 1px solid black;
+    padding: 5px;
+}
+.gamescreen__gridBox--filled{
+    background-color: red;
+}
