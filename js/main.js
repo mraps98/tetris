@@ -20,22 +20,23 @@ window.addEventListener("load", ()=>{
         [2, 10, 11, 12],
     ];
     const zTetromino = [
-        [],
-        [],
-        [],
-        [],
+        [0, 10, 11, 21],
+        [1, 2, 10, 11],
+        [0, 10, 11, 21],
+        [1, 2, 10, 11],
     ];
     const oTetromino = [
-        [],
-        [],
-        [],
-        [],
+        [0, 1, 10, 11],
+        [0, 1, 10, 11],
+        [0, 1, 10, 11],
+        [0, 1, 10, 11],
+        [0, 1, 10, 11],
     ];
     const iTetromino = [
-        [],
-        [],
-        [],
-        [],
+        [0, 10, 20, 30],
+        [0, 1, 2, 3],
+        [0, 10, 20, 30],
+        [0, 1, 2, 3],
     ];
     const tetrominos = [
         tTetromino, lTetromino, zTetromino, oTetromino, iTetromino,
@@ -45,7 +46,7 @@ window.addEventListener("load", ()=>{
     const generateNewBlock = () => {
         const rotation = Math.floor(Math.random() * 100) % 4;
         // currentBlock = tetrominos[Math.floor(Math.random() * 100) % 4][rotation];
-        currentBlock = tetrominos[1][3];
+        currentBlock = tetrominos[4][0];
     }
 
     /* Defining Grid backend */
