@@ -4,6 +4,7 @@ window.addEventListener("load", ()=>{
     const gridHeight = 20;
     let gridBackend = [];
     let currentRotation = 0;
+    let currentTetrominoIndex = 0;
     let currentBlock;
 
     /* Designin default tetrominoes */
@@ -44,9 +45,10 @@ window.addEventListener("load", ()=>{
 
 
     const generateNewBlock = () => {
-        const rotation = Math.floor(Math.random() * 100) % 4;
-        // currentBlock = tetrominos[Math.floor(Math.random() * 100) % 4][rotation];
-        currentBlock = tetrominos[4][0];
+	currentTetrominoIndex = Math.floor(Math.random() * 100) % 4;
+        currentRotation = Math.floor(Math.random() * 100) % 4;
+        currentBlock = tetrominos[currentTetrominoIndex][currentRotation];
+        //currentBlock = tetrominos[4][0];
     }
 
     /* Defining Grid backend */
@@ -110,7 +112,13 @@ window.addEventListener("load", ()=>{
         }
     }
     const rotate = () => {
-
+	if(currentRotation == 3){
+		currentRotation=0;
+	}else{
+		currentRotation++;
+	}
+        currentBlock = tetrominos[currentTetrominoIndex][currentRotation];
+	console.log("rotating");
     }
 
 
